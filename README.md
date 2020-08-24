@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-[![npm version]
+[![npm version](http://img.shields.io/npm/v/YOUR_NPM_PACKAGE_NAME.svg?style=flat)](https://npmjs.org/package/YOUR_NPM_PACKAGE_NAME "View this project on npm")
 ## Available Scripts
 
 In the project directory, you can run:
