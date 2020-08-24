@@ -17,5 +17,5 @@ First clone repository to your local pc then write
 
 And to run type
 
-`npm run`
+`npm start`
 
