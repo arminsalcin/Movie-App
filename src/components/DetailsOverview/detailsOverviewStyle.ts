@@ -18,11 +18,6 @@ const OverviewContent = styled.p`
   line-height: 1.5;
   font-weight: 300;
   color: #fff;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 `;
 
 export { Overview, OverviewContent, OverviewWrapper };
