@@ -17,7 +17,7 @@ const DetailsInfo: React.FC<IDetailsInfoProps> = ({
 }) => {
   return (
     <InfoTextWrapper>
-      <InfoText name={'Runtime'} value={runtime ? `${runtime}h` : 'No'} />
+      <InfoText name={'Runtime'} value={runtime ? `${runtime}min` : 'No'} />
       <InfoText name={'Popularity'} value={popularity ? popularity : 'No'} />
       <InfoText name={'Budget'} value={budget ? `$${budget}` : 'No'} />
       <InfoText name={'Vote Count'} value={voteCount ? voteCount : 'No'} />
