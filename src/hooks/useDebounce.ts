@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-type useDebounceReturn = [string, boolean];
+type useDebounceReturn = [string];
 
 const useDebounce = (val: string, delay: number): useDebounceReturn => {
   const [debouncedValue, setDebouncedValue] = useState<string>(val);
-  const [searchActive, setSearchActive] = useState<boolean>(false);
 
   useEffect(
     () => {
       const isSearchingFlag = val.length < 3 ? false : true;
+      const newSearchValue = isSearchingFlag ? val : "";
 
       const handler = setTimeout(() => {
-        setDebouncedValue(val);
-        setSearchActive(isSearchingFlag);
+        setDebouncedValue(newSearchValue);
       }, delay);
 
       return () => {
@@ -22,7 +21,7 @@ const useDebounce = (val: string, delay: number): useDebounceReturn => {
     [val, delay] // Only re-call effect if value or delay changes
   );
 
-  return [debouncedValue, searchActive];
+  return [debouncedValue];
 };
 
 export default useDebounce;

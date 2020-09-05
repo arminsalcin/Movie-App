@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { device } from '../../utils/responsive';
+import styled from "styled-components";
+import { device } from "../../utils/responsive";
 
 export const GridCard = styled.div`
   max-width: 1400px;
@@ -14,10 +14,11 @@ export const GridCard = styled.div`
 
 export const NoMovies = styled.h1`
   color: white;
-  font-size: 1.4rem;
-  padding: 0px 20px;
-  grid-column-start: 3;
-  @media ${device.mobileL} {
-    grid-column-start: 1;
-  }
+  font-size: 1.2rem;
+  padding: 20px 20px;
+`;
+
+export const GridWrapper = styled.div`
+  display: grid;
+  place-items: center;
 `;
