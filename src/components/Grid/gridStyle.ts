@@ -18,7 +18,7 @@ export const NoMovies = styled.h1`
   padding: 20px 20px;
 `;
 
-export const GridWrapper = styled.div`
+export const NoMoviesWrapper = styled.div`
   display: grid;
   place-items: center;
 `;

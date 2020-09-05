@@ -1,6 +1,6 @@
 import React from "react";
 import { IResponseDataType } from "../../interfaces";
-import { GridCard, NoMovies, GridWrapper } from "./gridStyle";
+import { GridCard, NoMovies, NoMoviesWrapper } from "./gridStyle";
 import Card from "../Card/Card";
 
 interface IGridProps {
@@ -13,7 +13,7 @@ const Grid: React.FC<IGridProps> = ({ data, tabId }) => {
     data !== undefined && data.results.length > 0 ? data : null;
 
   return (
-    <GridWrapper>
+    <>
       <GridCard>
         {isDataHere &&
           isDataHere.results.map((value) => (
@@ -29,8 +29,10 @@ const Grid: React.FC<IGridProps> = ({ data, tabId }) => {
             />
           ))}
       </GridCard>
-      {!isDataHere && <NoMovies>No Movies/TV shows Detected :(</NoMovies>}
-    </GridWrapper>
+      <NoMoviesWrapper>
+        {!isDataHere && <NoMovies>No Movies/TV shows Detected :(</NoMovies>}
+      </NoMoviesWrapper>
+    </>
   );
 };
 
